@@ -1,0 +1,214 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+/*
+
+body {
+	margin: 0;
+	padding: 0;
+}
+header {
+	padding-top: 5%;
+	h1 {
+		margin-bottom: -.6em;
+		position: relative;
+		text-align: center;
+		z-index: 10;
+	}
+	img {
+		margin-bottom: -7px;
+	}
+	div {
+		padding-bottom: 0;
+		@include linear-gradient(to top, $peach, $tan);
+	}
+}
+
+
+// Home
+
+section {
+	padding: 5% 0;
+	// respond
+	//@include media($tablet) {
+	//	padding-left: $gutter;
+	//	padding-right: $gutter;
+	//}
+}
+
+#testimonials, #clients, footer {
+	background-color: $olive;
+}
+
+.odd {
+	color: #fff;
+	@include outer-container;
+	h1, h2, h3, h4, p, cite {
+		color: #fff;
+	}
+}
+
+#focus {
+	@include outer-container;
+	div {
+		@include outer-container;
+	}
+	h2 {
+		margin-bottom: 1.5em;
+		text-align: center;
+		@include span-columns(4);
+		@include shift(4);
+	}
+	p {
+		font-size: 1.25em;
+		@include span-columns(8);
+		@include shift(2);
+	}
+}
+
+#testimonials {
+	@include background-image(url('/images/sunset.jpg'));
+	background-size: cover;
+	blockquote {
+		@include span-columns(4);
+		@include omega;
+	}
+	&:after {
+		content: "";
+		opacity: 0.5;
+		top: 0;
+		left: 0;
+		position: absolute;
+		z-index: -1;
+	}
+}
+
+#work {
+	@include outer-container;
+	h4 {
+		@include fill-parent;
+	}
+	.logo, .web {
+		@include outer-container(90%);
+	}
+	.web {
+		margin-bottom: $gutter*1.5;
+		figure {
+			margin: 0;
+			@include media($desktop) {
+				@include span-columns(3);
+				@include omega(4n);
+			}
+			@include media($tablet) {
+				@include span-columns(4);
+				@include omega(3n);
+			}
+			@include media($mobile) {
+				@include span-columns(2);
+				@include omega(2n);
+			}			
+		}
+	}
+	.logo {
+		span {
+			@include span-columns(4);
+		}
+	}
+	img {
+		border: 1px solid lighten($tan,20%);
+	}
+}
+
+#clients {
+	@include background-image(url('/images/contemporary_china.png'));
+	background-blend-mode: multiply;
+	p {
+		padding-bottom: $gutter;
+	}
+	span.client {
+		padding: $gutter $gutter*3;
+		@include span-columns(4);
+		@include omega(3n);
+	}
+}
+
+#about {
+	@include outer-container;
+	h3, p {
+		@include span-columns(8);
+	}
+	h4, ul {
+		@include span-columns(4);
+		@include omega;
+	}
+	h4 {
+		margin-bottom: 0;
+	}
+	li {
+		border-bottom: 1px solid $olive;
+		padding: 4px 0 2px $gutter;
+		font-style: italic;
+		&:hover:after {
+			color: $olive;
+			font-size: 80%;
+		}
+	}
+	.sass:hover:after {
+		content: " - best thing since sliced bread";
+	}
+	.git:hover:after {
+		content: " - three rights make a left";
+	}
+	.wp:hover:after {
+		content: " - for lack of a better wrench";
+	}
+	.ror:hover:after {
+		content: " - ooh, shiny";
+	}
+}
+
+footer {
+	@include background-image(url('/images/symphony.png'));
+	background-blend-mode: multiply;
+	a {
+		color: $dark-brown !important;
+		font-size: 100% !important;
+		margin: $gutter 0;
+		@include button($peach);
+	}
+	img {
+		@include span-columns(2.5);
+	}
+}
+
+.mail {
+	margin-right: $gutter;
+}
+.mail:before {
+	background: url(/images/mail.svg) no-repeat;
+	background-size: 20px 20px;
+	content: "";
+	padding-left: 30px;
+}
+.twitter:before {
+	background: url(/images/twitter.svg) no-repeat;
+	background-size: 20px 20px;
+	content: "";
+	padding-left: 30px;
+}
+.plus:before {
+	background: url(/images/plus.svg) no-repeat;
+	background-size: 20px 20px;
+	content: "";
+	padding-left: 30px;
+}
+*/
+
+/*# sourceMappingURL=main.css.map */

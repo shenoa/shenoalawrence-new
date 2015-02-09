@@ -1,0 +1,17 @@
+{
+  "name": "shenoalawrence.com",
+  "description": "The life and work of Shenoa Lawrence",
+  "version": "0.0.0",
+  "author": "Shenoa Lawrence",
+  "dependencies": "",
+  "homepage": "http://shenoalawrence.com",
+  "license": "",
+  "devDependencies": {
+    "browser-sync": "^2.0.0-rc1",
+    "gulp": "^3.8.11",
+    "gulp-livereload": "^3.6.0",
+    "gulp-minify-css": "^0.3.7",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^1.0.0"
+  }
+}
