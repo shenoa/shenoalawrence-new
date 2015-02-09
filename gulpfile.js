@@ -11,7 +11,10 @@ gulp.task('default', ['sass', 'browser-sync'], function () {
 
 gulp.task('sass', function() {
  	return gulp.src('sass/**/*.scss')
-		.pipe(sass({ style: 'expanded' }))
+		.pipe(sass({
+            style: 'expanded',
+            errLogToConsole: true
+        }))
 		.pipe(gulp.dest('css'))
     .pipe(reload({stream:true}))
 		.pipe(notify({ message: 'Styles task complete' }));
