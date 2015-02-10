@@ -1,5 +1,13 @@
 // Typography
-$base-font-family: $helvetica;
+
+@import url("//hello.myfonts.net/count/27d894");
+@include font-face("MontelagoAOE", "/fonts/montelago/27D894_0_0");
+@include font-face("MontelagoAOEFlare", "/fonts/montelago/27D894_1_0", bold);
+
+$sans-serif: "museo-sans",sans-serif;
+$serif: MontelagoAOE;
+
+$base-font-family: $sans-serif;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
@@ -16,18 +24,27 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$blue: #477dca;
-$dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #ddd;
+$brown: #815633;
+$dark-brown: #5F371A;
+$olive: #AAA17E;
+$cream: #FBF5E5;
+$peach: #FECF90;
+$tan: #C5A170;
 
 // Font Colors
-$base-background-color: #fff;
-$base-font-color: $dark-gray;
-$action-color: $blue;
+$base-background-color: $cream;
+$base-font-color: $brown;
+$base-accent-color: lighten($brown,20%);
+$action-color: $peach;
+
+// Link Colors
+$base-link-color: $base-accent-color;
+$hover-link-color: darken($base-accent-color, 15);
+$base-button-color: $base-link-color;
+$hover-button-color: $hover-link-color;
 
 // Border
-$base-border-color: $light-gray;
+$base-border-color: $olive;
 $base-border: 1px solid $base-border-color;
 
 // Forms

@@ -1,50 +1,20 @@
 @import "bourbon/bourbon";
-//@import "base/grid-settings";
+@import "base/grid-settings";
 @import "neat/neat";
-//@import "base/base";
+@import "base/base";
 
-//@import "neat/neat-helpers";
+@import "neat/neat-helpers";
 
-//$mobile-size: 1px;
-//$tablet-size: 420px;
-//$desktop-size: 1088px;
+$visual-grid: true;
 
-//$mobile: new-breakpoint(min-width ($mobile-size) max-width ($tablet-size - 1) 4);
-//$tablet: new-breakpoint(min-width ($tablet-size) max-width ($desktop-size - 1) 12);
-//$desktop: new-breakpoint(min-width $desktop-size 12);
+$mobile-size: 1px;
+$tablet-size: 420px;
+$desktop-size: 1088px;
 
-//$visual-grid: true;
+$mobile: new-breakpoint(min-width ($mobile-size) max-width ($tablet-size - 1) 4);
+$tablet: new-breakpoint(min-width ($tablet-size) max-width ($desktop-size - 1) 12);
+$desktop: new-breakpoint(min-width $desktop-size 12);
 
-//@import url("//hello.myfonts.net/count/27d894");
-//@include font-face("MontelagoAOE", "/fonts/montelago/27D894_0_0");
-//@include font-face("MontelagoAOEFlare", "/fonts/montelago/27D894_1_0", bold);
-
-$brown: #815633;
-$dark-brown: #5F371A;
-$olive: #AAA17E;
-$cream: #FBF5E5;
-$peach: #FECF90;
-$tan: #C5A170;
-
-$sans-serif: "museo-sans",sans-serif;
-$serif: MontelagoAOE;
-$base-font-family: $sans-serif;
-$header-font-family: $base-font-family;
-
-// Background Color
-$base-background-color: $cream;
-
-// Font Colors
-$base-font-color: $brown;
-$base-accent-color: lighten($brown,20%);
-
-// Link Colors
-$base-link-color: $base-accent-color;
-$hover-link-color: darken($base-accent-color, 15);
-$base-button-color: $base-link-color;
-$hover-button-color: $hover-link-color;
-
-/*
 
 body {
 	margin: 0;
@@ -70,6 +40,31 @@ header {
 
 // Home
 
+h1 {
+	color: $dark-brown;
+	font-family: $serif;
+	font-size: $base-font-size*6;
+	font-weight: normal;
+	line-height: $heading-line-height;
+}
+h2 {
+	color: $dark-brown;
+	font-size: $base-font-size * 2;
+}
+h3 {
+	font-size: $base-font-size * 1.5;
+}
+h4 {
+	font-size: $base-font-size * 1.25;
+	em {
+		font-family: $serif;
+		font-size: $base-font-size * 2.5;
+		font-style: normal;
+		font-weight: normal;
+		text-transform: lowercase;
+	}
+}
+
 section {
 	padding: 5% 0;
 	// respond
@@ -81,6 +76,10 @@ section {
 
 #testimonials, #clients, footer {
 	background-color: $olive;
+}
+blockquote {
+	margin: 0;
+	padding: 0 $gutter 0 0;
 }
 
 .odd {
@@ -132,7 +131,7 @@ section {
 		@include fill-parent;
 	}
 	.logo, .web {
-		@include outer-container(90%);
+		@include outer-container;
 	}
 	.web {
 		margin-bottom: $gutter*1.5;
@@ -163,6 +162,9 @@ section {
 }
 
 #clients {
+	div {
+		@include outer-container;
+	}
 	@include background-image(url('/images/contemporary_china.png'));
 	background-blend-mode: multiply;
 	p {
@@ -186,6 +188,8 @@ section {
 	}
 	h4 {
 		margin-bottom: 0;
+		margin-top: 0;
+		line-height: 1em;
 	}
 	li {
 		border-bottom: 1px solid $olive;
@@ -245,5 +249,5 @@ footer {
 	content: "";
 	padding-left: 30px;
 }
-*/
+
 // Thanks subtlepatterns.com for the nifty art
