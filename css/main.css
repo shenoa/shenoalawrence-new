@@ -188,13 +188,14 @@ img, picture {
   max-width: 100%; }
 
 body {
+  background-color: #FBF5E5;
   margin: 0;
   padding: 0; }
 
 header {
   padding-top: 5%; }
   header h1 {
-    margin-bottom: -.6em;
+    margin-bottom: -.55em;
     position: relative;
     text-align: center;
     z-index: 10; }
@@ -492,18 +493,18 @@ footer {
 
 .mail:before {
   background: url(/images/mail.svg) no-repeat;
-  background-size: 20px 20px;
+  background-size: contain;
   content: "";
   padding-left: 30px; }
 
 .twitter:before {
   background: url(/images/twitter.svg) no-repeat;
-  background-size: 20px 20px;
+  background-size: contain;
   content: "";
   padding-left: 30px; }
 
 .plus:before {
   background: url(/images/plus.svg) no-repeat;
-  background-size: 20px 20px;
+  background-size: contain;
   content: "";
   padding-left: 30px; }
