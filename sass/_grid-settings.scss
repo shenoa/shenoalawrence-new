@@ -1,0 +1,10 @@
+@import "neat/neat-helpers";
+
+$breakpoint-one: 420px;
+$breakpoint-two: 800px;
+$breakpoint-three: 1088px;
+
+$mobile: new-breakpoint(max-width ($breakpoint-one) 4);
+$tablet: new-breakpoint(max-width ($breakpoint-two) 12);
+$desktop: new-breakpoint(min-width ($breakpoint-two) 12);
+$full: new-breakpoint(min-width ($breakpoint-three) 12);
