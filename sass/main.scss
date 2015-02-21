@@ -1,20 +1,7 @@
 @import "bourbon/bourbon";
-@import "base/grid-settings";
+@import "grid-settings";
 @import "neat/neat";
 @import "base/base";
-
-@import "neat/neat-helpers";
-
-$visual-grid: true;
-
-$mobile-size: 1px;
-$tablet-size: 420px;
-$desktop-size: 1088px;
-
-$mobile: new-breakpoint(min-width ($mobile-size) max-width ($tablet-size - 1) 4);
-$tablet: new-breakpoint(min-width ($tablet-size) max-width ($desktop-size - 1) 12);
-$desktop: new-breakpoint(min-width $desktop-size 12);
-
 
 body {
 	background-color: $cream;
@@ -22,12 +9,20 @@ body {
 	padding: 0;
 }
 header {
-	padding-top: 5%;
+	//padding-top: 5%;
 	h1 {
-		margin-bottom: -.55em;
+		//color: $olive;
+		font-size: 4em;
+		line-height: .5em;
+		margin-bottom: -12px;
+		margin-top: 8%;
 		position: relative;
 		text-align: center;
 		z-index: 10;
+		@include media($desktop) {
+			font-size: 6em;
+			margin-bottom: -21px;
+		}
 	}
 	img {
 		margin-bottom: -7px;
@@ -44,19 +39,22 @@ header {
 h1 {
 	color: $dark-brown;
 	font-family: $serif;
-	font-size: $base-font-size*6;
+	//font-size: $base-font-size*6;
 	font-weight: normal;
 	line-height: $heading-line-height;
 }
 h2 {
 	color: $dark-brown;
 	font-size: $base-font-size * 2;
+	margin: 0;
 }
 h3 {
-	font-size: $base-font-size * 1.5;
+	//color: lighten($brown, 20%);
+	font-size: $base-font-size * 1.2;
+	margin: .75em 0 1.2em 0;
 }
 h4 {
-	font-size: $base-font-size * 1.25;
+	font-size: $base-font-size * 1.5;
 	em {
 		font-family: $serif;
 		font-size: $base-font-size * 2.5;
@@ -85,27 +83,42 @@ blockquote {
 
 .odd {
 	color: #fff;
-	@include outer-container;
+	@include outer-container(90%);
 	h1, h2, h3, h4, p, cite {
 		color: #fff;
 	}
 }
 
 #focus {
-	@include outer-container;
+	@include outer-container(90%);
 	div {
 		@include outer-container;
 	}
 	h2 {
+		font-size: 1.5em;
 		margin-bottom: 1.5em;
 		text-align: center;
-		@include span-columns(4);
-		@include shift(4);
+			br {
+				display: none;
+			}
+		@include media($tablet) {
+			br {
+				display: inline-block;
+			}			
+		}
+		@include media($desktop) {
+			font-size: $base-font-size * 2;
+			br {
+				display: inline-block;
+			}
+		}
 	}
 	p {
 		font-size: 1.25em;
-		@include span-columns(8);
-		@include shift(2);
+		@include media($desktop) {
+			@include span-columns(8);
+			@include shift(2);
+		}
 	}
 }
 
@@ -113,8 +126,20 @@ blockquote {
 	@include background-image(url('/images/sunset.jpg'));
 	background-size: cover;
 	blockquote {
-		@include span-columns(4);
-		@include omega;
+		border-bottom: 1px solid #fff;
+		margin-bottom: $gutter;
+		@include media($desktop) {
+			border-bottom: none;
+			margin-bottom: 0;
+			padding-right: $gutter;
+			@include span-columns(4);
+			@include omega;
+		}
+	}
+	cite {
+		display: block;
+		padding-bottom: $gutter;
+		text-align: center;
 	}
 	&:after {
 		content: "";
@@ -127,7 +152,7 @@ blockquote {
 }
 
 #work {
-	@include outer-container;
+	@include outer-container(90%);
 	h4 {
 		@include fill-parent;
 	}
@@ -137,7 +162,9 @@ blockquote {
 	.web {
 		margin-bottom: $gutter*1.5;
 		figure {
-			margin: 0;
+			//background-color: $olive;
+			margin: 0 0 $gutter 0;
+			position: relative;
 			@include media($desktop) {
 				@include span-columns(3);
 				@include omega(4n);
@@ -163,39 +190,49 @@ blockquote {
 }
 
 #clients {
-	div {
-		@include outer-container;
-	}
 	@include background-image(url('/images/contemporary_china.png'));
 	background-blend-mode: multiply;
 	p {
 		padding-bottom: $gutter;
 	}
 	span.client {
-		padding: $gutter $gutter*3;
+		padding: $gutter $gutter*1;
 		@include span-columns(4);
 		@include omega(3n);
+		@include media($desktop) {
+			padding: $gutter $gutter * 3;
+		}
 	}
 }
 
 #about {
-	@include outer-container;
+	@include outer-container(90%);
 	h3, p {
-		@include span-columns(8);
+		@include span-columns(12);
+		@include media($desktop) {
+			@include span-columns(8);
+		}
 	}
 	h4, ul {
-		@include span-columns(4);
-		@include omega;
+		@include span-columns(12);
+		@include media($desktop) {
+			@include span-columns(4);
+			@include omega;
+		}
 	}
 	h4 {
 		margin-bottom: 0;
-		margin-top: 0;
+		margin-top: $gutter/2;
 		line-height: 1em;
+		@include media($desktop) {
+			margin-top: 0;
+		}
 	}
 	li {
 		border-bottom: 1px solid $olive;
-		padding: 4px 0 2px $gutter;
+		font-size: 1em;
 		font-style: italic;
+		padding: 5px 0 3px $gutter;
 		&:hover:after {
 			color: $olive;
 			font-size: 80%;
@@ -213,6 +250,10 @@ blockquote {
 	.ror:hover:after {
 		content: " - ooh, shiny";
 	}
+}
+
+#payment {
+	@include outer-container(90%);
 }
 
 footer {
