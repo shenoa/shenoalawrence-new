@@ -2,6 +2,7 @@
 @import "grid-settings";
 @import "neat/neat";
 @import "base/base";
+@import "elements";
 
 body {
 	background-color: $cream;
@@ -183,9 +184,21 @@ blockquote {
 		span {
 			@include span-columns(4);
 		}
+		img {
+			border: 1px solid lighten($tan,20%);
+		}
 	}
-	img {
-		border: 1px solid lighten($tan,20%);
+	figure {
+		figcaption {
+			opacity: 0;
+			@include transition(all .5s ease-in-out);
+		}
+		&:hover {
+			figcaption {
+				opacity: 1;
+				@include transition(all .3s ease-in-out);
+			}
+		}
 	}
 }
 
