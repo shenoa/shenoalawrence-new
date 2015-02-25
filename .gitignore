@@ -19,3 +19,5 @@ db
 .sass-cache
 /css/*
 *.css
+
+dandelion.yaml
