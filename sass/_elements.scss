@@ -1,3 +1,5 @@
+@import "base/variables";
+
 $barBgColor: #9D846E;
 $barHeight: 24px;
 $barColor: lighten($barBgColor, 20%);
@@ -39,8 +41,11 @@ $browserBgColor: #fff;
     font-size: 7px;
     font-family: 'Verdana';
     text-align: left;
-    color: #999;
+    color: $dark_brown;
     border-radius: 1px;
+    @include media(max-width $tablet) {
+      display: none;
+    }
   }
   
   // further content styles
