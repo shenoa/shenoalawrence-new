@@ -50,14 +50,16 @@ h2 {
 	margin: 0;
 }
 h3 {
-	//color: lighten($brown, 20%);
-	font-size: $base-font-size * 1.2;
+	color: lighten($brown, 20%);
+	font-size: $base-font-size * 1.1;
 	margin: .75em 0 1.2em 0;
+	font-weight: 900;
 }
 h4 {
 	font-size: $base-font-size * 1.5;
 	@include media(max-width $mobile) {
 		font-size: $base-font-size * 1.3;
+		line-height: 1.3em;
 	}
 	em {
 		font-family: $serif;
@@ -86,8 +88,11 @@ blockquote {
 .odd {
 	color: #fff;
 	@include outer-container(90%);
-	h1, h2, h3, h4, p, cite {
+	h1, h2, h4, p, cite {
 		color: #fff;
+	}
+	h3 {
+		color: $peach;
 	}
 }
 
@@ -213,11 +218,11 @@ blockquote {
 		padding-bottom: $gutter;
 	}
 	span.client {
-		padding: $gutter $gutter*1;
+		padding: $gutter $gutter*1.5;
 		@include span-columns(4);
 		@include omega(3n);
 		@include media($desktop) {
-			padding: $gutter $gutter * 3;
+			padding: $gutter $gutter * 3.5;
 		}
 	}
 }
