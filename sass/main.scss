@@ -10,9 +10,7 @@ body {
 	padding: 0;
 }
 header {
-	//padding-top: 5%;
 	h1 {
-		//color: $olive;
 		font-size: 4em;
 		line-height: .5em;
 		margin-bottom: -12px;
@@ -20,7 +18,7 @@ header {
 		position: relative;
 		text-align: center;
 		z-index: 10;
-		@include media($desktop) {
+		@include media(min-width $desktop) {
 			font-size: 6em;
 			margin-bottom: -21px;
 		}
@@ -40,7 +38,6 @@ header {
 h1 {
 	color: $dark-brown;
 	font-family: $serif;
-	//font-size: $base-font-size*6;
 	font-weight: normal;
 	line-height: $heading-line-height;
 }
@@ -108,12 +105,12 @@ blockquote {
 			br {
 				display: none;
 			}
-		@include media($tablet) {
+		@include media(max-width $tablet) {
 			br {
 				display: inline-block;
 			}			
 		}
-		@include media($desktop) {
+		@include media(min-width $desktop) {
 			font-size: $base-font-size * 2;
 			br {
 				display: inline-block;
@@ -122,7 +119,10 @@ blockquote {
 	}
 	p {
 		font-size: 1.25em;
-		@include media($desktop) {
+		@include media(max-width $mobile) {
+			font-size: 1.1em;
+		}
+		@include media(min-width $desktop) {
 			@include span-columns(8);
 			@include shift(2);
 		}
@@ -169,7 +169,6 @@ blockquote {
 	.web {
 		margin-bottom: $gutter*1.5;
 		figure {
-			//background-color: $olive;
 			margin: 0 0 $gutter 0;
 			position: relative;
 			@include media(min-width $tablet) {
