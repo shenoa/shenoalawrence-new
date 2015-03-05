@@ -1,0 +1,25 @@
+ErrorDocument 404 /404.html
+SetEnv TZ America/Seattle
+
+## MAIN DEFAULTS ###
+Options +ExecCGI -Indexes
+IndexIgnore *
+DirectoryIndex index.html index.htm index.php
+DefaultLanguage en-US
+AddDefaultCharset UTF-8
+ServerSignature Off
+
+## REMOVE WWW ##
+Options +FollowSymlinks
+RewriteEngine on
+RewriteCond %{http_host} ^www\.viewportwireless\.com [NC]
+RewriteRule ^(.*)$ http://viewportwireless.com/$1 [R=301,NC]
+
+## MIME TYPES ###
+AddType image/x-icon .ico
+
+# secure htaccess file
+<Files .htaccess>
+ order allow,deny
+ deny from all
+</Files>

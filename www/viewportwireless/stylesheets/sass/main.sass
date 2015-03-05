@@ -1,0 +1,340 @@
+@import "reset"
+@import "css3-mixins"
+
+$light-text: #fffff9
+$dark-text: #484B4E
+$light-red: #e42313
+$dark-red: #bb1305
+$light-gray: #484b4e
+$dark-gray: #3f4245
+$page-width: 940px
+$gutter: 20px
+
+body
+	font:
+		family: 'Questrial'
+		size: 14px
+		color: $dark-text
+.container
+	width: $page-width
+	margin: 0 auto /* center */
+h2
+	color: $dark-text
+	font-size: 170%
+
+#pagetitle
+	+linear-gradient(#e42313, #bb1305)
+	margin-bottom: 40px
+	h1
+		padding: 25px 0
+		color: #ffffff
+		font-size: 210%
+h2
+	padding: 15px 0
+	margin-bottom: 30px
+	color: $dark-text
+	text-transform: uppercase
+	letter-spacing: .1em
+	border-top: 1px solid #dadbdb
+	border-bottom: 1px solid #dadbdb
+	font-size: 180%
+	background: rgb(255,255,255)
+	background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(237,237,238,1) 50%, rgba(255,255,255,1) 100%)
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(50%,rgba(237,237,238,1)), color-stop(100%,rgba(255,255,255,1)))
+	background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(237,237,238,1) 50%,rgba(255,255,255,1) 100%)
+	background: -o-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(237,237,238,1) 50%,rgba(255,255,255,1) 100%)
+	background: -ms-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(237,237,238,1) 50%,rgba(255,255,255,1) 100%)
+	background: linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(237,237,238,1) 50%,rgba(255,255,255,1) 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 )
+	img
+		float: left
+		margin: -28px 20px 0 230px
+h2.industry
+	padding: 0
+	border: 0
+	background: none
+h3
+	font-size: 120%
+	font-weight: bold
+	margin-bottom: 25px
+h4
+	font-size: 120%
+	margin-bottom: 0
+	text-transform: uppercase
+	color: $dark-text
+	font-weight: bold
+	
+a
+	color: #000000
+a:hover
+	color: $dark-red
+p
+	color: $dark-text
+	line-height: 130%
+	padding: 0 0 25px 0
+	font-size: 140%
+strong
+	font-weight: bold
+	font-size: 105%
+
+#main ul
+	margin: 0 0 25px 35px
+	ul
+		margin: 0 0 0 35px
+	li
+		font-size: 105%
+		list-style: circle
+		line-height: 1.5em
+		color: $dark-text
+.columns
+	overflow: hidden
+	p
+		font-size: 110%
+	h3
+		text-align: center
+p.large
+	font-size: 140%
+.half
+	width: 49%
+	float: left
+	text-align: center
+	margin-bottom: 35px
+.column3
+	width: 290px
+	float: left
+	margin-left: 35px
+	strong: 
+		font-weight: bold
+		text-transform: uppercase
+	&:first-child
+		margin-left: 0
+	img
+		display: block
+		margin: 0 auto 25px auto
+	.iconsm
+		margin: 0 30px 30px 30px
+		float: left
+			
+.column2wide, form
+	width: 600px
+	float: left
+	margin-right: 0px
+
+.column3 img.iconsm
+	float: left
+	display: block
+	padding: 0
+	margin: 0 10px 0 10px
+.column3 p.iconsm
+	float: left
+	margin: 0 0 45px 0
+	padding: 0
+	width: 215px
+	border: 0px solid #000000
+img.scenario
+	margin: auto auto 35px 25px
+
+
+// HEAD OF DOCUMENT AND NAVIGATION - INSERT NAV AFTER SASS CONVERSION
+
+header
+	padding-top: 15px
+	height: 122px
+	position: relative
+	z-index: 10
+	>p
+		line-height: 1em
+		position: absolute
+		height: auto
+		width: 47%
+		overflow: auto
+		color: $dark-text
+		font-size: 100%
+	>ul
+		position: absolute
+		right: 0
+		height: auto
+		overflow: auto
+		color: $dark-text
+		li
+			display: inline
+			padding-left: 15px
+			line-height: 1em
+	img
+		position: absolute
+		left: 0
+		top: 45px
+
+// HOMEPAGE SPECIFIC CODE
+
+#slider
+	height: 250px
+	background-color: #eeeeee
+	background-image: url(../../images/slider_bg.jpg)
+	border-bottom: solid 1px #ffffff
+	overflow: hidden
+	position: relative
+	z-index: 1
+	
+	div
+		position: absolute
+		padding: 0
+		width: inherit
+		top: 250px
+		opacity: 0
+		+transition(all 0.3s ease-in-out)
+		img
+			float: left
+		h2
+			text-transform: uppercase
+			margin-bottom: .2em
+			padding: 60px 60px 0 0
+			background: none !important
+			filter: none
+			border: none
+			text-align: left
+			letter-spacing: 0
+		p
+			line-height: 1.3em
+			font-size: 110%
+			margin-bottom: 1em
+			padding: 0 60px 0 0
+			color: $dark-text
+		a
+			display: block
+			float: left
+			width: 270px
+			color: $light-text
+			text-align: center
+			text-decoration: none
+			letter-spacing: 0.1em
+			padding: 7px 0 7px 0
+			opacity: 1
+			+transition(opacity 0.3s ease)
+			+linear-gradient(#484b4e, #3f4245)
+			+border-radius(10px)
+			&:hover
+				opacity: .8
+				+transition(opacity 0.3s ease)
+			span
+				text-transform: uppercase
+		&.active
+			opacity: 1
+			top: 0
+			+transition(all 0.3s ease-in-out)
+
+#slider .components img
+	margin: 12px 81px 0 20px
+#slider .software img
+	margin: 12px 43px 0 12px
+#slider .alerts img
+	margin: 15px 26px 0 15px
+.controller
+	height: 185px
+	position: relative
+	+linear-gradient(#e42313, #bb1305)
+	p
+		background-image: none
+		background-position: top center
+		float: left
+		width: $page-width / 3 - 2
+		font-size: 150%
+		text-align: center
+		line-height: 1em
+		height: 185px
+		padding: 0
+		&:hover
+			background-image: url(../../images/spot.png)
+			background-repeat: no-repeat
+			background-position: center center
+			+transition(all 0.5s ease)
+		&:first-child a
+			border-left: none
+	a
+		color: $light-text
+		text-decoration: none
+		margin-top: 25px
+		padding: 15px 45px 15px 45px
+		border-left: solid 1px #ffffff
+		display: block
+.controller + div.container
+	position: relative
+	padding: $gutter
+	height: 490px
+	h2
+		font-size: 200%
+		text-align: center
+		margin-top: $gutter
+		background: none
+		border: none
+		text-transform: none
+		margin-bottom: 0
+		padding: 0
+		letter-spacing: 0
+	h3
+		font-size: 110%
+		text-align: center
+		margin-bottom: $gutter * 2
+		color: $dark-text
+//	p
+//		margin-left: 20px
+//		float: left
+//		width: 300px
+//		height: 195px
+//		padding: 0
+//	p.industry_water
+//		margin-left: 0
+//		background-image: url(../../images/industry_water.jpg)
+//	p.industry_hospital
+//		background-image: url(../../images/industry_hospital.jpg)
+//	p.industry_ag
+//		background-image: url(../../images/industry_ag.jpg)
+//	div p a
+//		display: block
+//		width: auto
+//		height: 155px
+//		padding: 20px
+//		font-size: 100%
+//		text-transform: uppercase
+//		text-align: right
+//		text-decoration: none
+//		border: solid 1px $light-gray
+//		color: #000000
+
+// END OF PAGE AND COMMON ELEMENTS
+
+footer
+	height: 122px
+	padding: 15px
+	position: relative
+	+linear-gradient(#484b4e, #3f4245)
+	p
+		font-size: 100%
+		color: $light-text
+	a
+		color: $light-text
+
+.clearfix:after
+	visibility: hidden
+	display: block
+	font-size: 0
+	content: " "
+	clear: both
+	height: 0
+.alignleft
+	float: left
+	overflow: auto
+.alignright
+	float: right
+	overflow: auto
+.textright
+	text-align: right
+.aligncenter
+	text-align: center
+	
+	
+// IMPORTED PRINT STYLES TO OVERRIDE PREVIOUS STYLES
+
+
+@import "form"
+@import "print"
