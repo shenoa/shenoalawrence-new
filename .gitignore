@@ -19,6 +19,6 @@ db
 .sass-cache
 /css/*
 *.css
-/sandbox/*
+/www/sandbox/*
 
 dandelion.yml
